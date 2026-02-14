@@ -1,0 +1,11 @@
+# Ultimate Soccer Trivia - robots.txt
+# https://ultimatesoccertrivia.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ultimatesoccertrivia.com/sitemap.xml
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1

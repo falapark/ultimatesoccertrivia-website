@@ -3,8 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ultimate Soccer Trivia Card Game - 850+ questions to test your soccer knowledge. Perfect for watch parties, family game nights, and true fans.">
-    <title>Ultimate Soccer Trivia | The #1 Soccer Trivia Card Game</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Ultimate Soccer Trivia Game | 850+ Questions | World Cup 2026 Ready</title>
+    <meta name="description" content="The #1 soccer trivia card game with 850+ questions. Perfect for World Cup 2026 watch parties, family game nights & settling debates. Premier League, La Liga, MLS & more. Free Prime shipping!">
+    <meta name="keywords" content="soccer trivia, football trivia, soccer trivia game, soccer quiz, world cup trivia, premier league trivia, soccer trivia questions, soccer party games, gifts for soccer fans">
+    <meta name="author" content="Ultimate Soccer FC LLC">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ultimatesoccertrivia.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://ultimatesoccertrivia.com/">
+    <meta property="og:title" content="Ultimate Soccer Trivia | 850+ Questions | #1 Soccer Trivia Game">
+    <meta property="og:description" content="Test your soccer knowledge with 850+ trivia questions! Perfect for World Cup 2026 watch parties, game nights & true fans. ⭐ 5-Star Rated on Amazon.">
+    <meta property="og:image" content="https://ultimatesoccertrivia.com/assets/hero-main.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Ultimate Soccer Trivia">
+    <meta property="product:price:amount" content="29.99">
+    <meta property="product:price:currency" content="USD">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ultimatesoccertrivia.com/">
+    <meta name="twitter:title" content="Ultimate Soccer Trivia | 850+ Questions | #1 Soccer Trivia Game">
+    <meta name="twitter:description" content="Test your soccer knowledge with 850+ trivia questions! Perfect for World Cup 2026 watch parties & game nights. ⭐ 5-Star Rated.">
+    <meta name="twitter:image" content="https://ultimatesoccertrivia.com/assets/hero-main.jpg">
+    
+    <!-- Schema.org Product Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Ultimate Soccer Trivia Card Game",
+      "description": "The ultimate soccer trivia card game with 850+ questions covering World Cup, Premier League, La Liga, Serie A, MLS and more. Perfect for watch parties, family game nights, and settling debates.",
+      "image": "https://ultimatesoccertrivia.com/assets/hero-main.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Ultimate Soccer FC"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.amazon.com/dp/B0DNTJSJW1",
+        "priceCurrency": "USD",
+        "price": "29.99",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Ultimate Soccer FC LLC"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "50"
+      }
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many questions are in Ultimate Soccer Trivia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ultimate Soccer Trivia contains 850+ unique trivia questions, which is 5-7 times more than any competitor on the market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What soccer leagues are covered in the trivia game?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The game covers all major leagues and tournaments including World Cup, Premier League, La Liga, Serie A, Bundesliga, MLS, Champions League, and international competitions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many players can play Ultimate Soccer Trivia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2-10 players can play. You can play individually or split into teams for epic showdowns at watch parties and game nights."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this soccer trivia game good for World Cup 2026 parties?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Ultimate Soccer Trivia is perfect for World Cup 2026 watch parties. We're also releasing a free World Cup 2026 expansion pack."
+          }
+        }
+      ]
+    }
+    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -810,6 +910,53 @@
         }
 
         /* ============================================
+           FAQ SECTION - SEO Optimized
+           ============================================ */
+        .faq {
+            padding: 80px 0;
+            background: var(--dark-card);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--dark-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            transition: var(--transition);
+        }
+
+        .faq-answer {
+            padding: 0 25px 20px;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* ============================================
            FOOTER
            ============================================ */
         .footer {
@@ -1196,6 +1343,73 @@
                 🛒 Buy Now on Amazon — $29.99
             </a>
             <p class="cta-guarantee">✓ Free shipping with Prime &nbsp;|&nbsp; ✓ 30-day returns &nbsp;|&nbsp; ✓ 5-Star rated</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section - SEO Optimized -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+                <p class="section-subtitle">Everything you need to know about Ultimate Soccer Trivia</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How many questions are in Ultimate Soccer Trivia?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Ultimate Soccer Trivia contains <strong>850+ unique trivia questions</strong>, which is 5-7 times more than any competitor on the market. You won't see repeat questions for months of gameplay!
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What soccer leagues and tournaments are covered?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        The game covers all major leagues and tournaments including <strong>World Cup, Premier League, La Liga, Serie A, Bundesliga, MLS, Champions League</strong>, and international competitions. From Messi to Mbappé, we've got it all!
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How many players can play?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <strong>2-10 players</strong> can play. You can play individually or split into teams for epic showdowns at watch parties and game nights. Perfect for World Cup 2026 viewing parties!
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is this good for World Cup 2026 watch parties?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <strong>Absolutely!</strong> Ultimate Soccer Trivia is perfect for World Cup 2026 watch parties. Play during halftime or before kickoff. We're also releasing a <strong>free World Cup 2026 expansion pack</strong> for all owners!
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What difficulty levels are included?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Questions range from <strong>easy to expert</strong>. Casual fans can compete alongside die-hards. Everyone from your 10-year-old nephew to your know-it-all friend can play and have fun!
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Does it come with free shipping?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We sell exclusively on Amazon, so <strong>Prime members get FREE shipping</strong>. Most orders arrive in 1-2 days. Plus, Amazon offers easy 30-day returns if you're not completely satisfied.
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
