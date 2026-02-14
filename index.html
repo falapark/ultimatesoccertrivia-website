@@ -6,7 +6,7 @@
     <meta name="description" content="Ultimate Soccer Trivia Card Game - 850+ questions to test your soccer knowledge. Perfect for watch parties, family game nights, and true fans.">
     <title>Ultimate Soccer Trivia | The #1 Soccer Trivia Card Game</title>
     
-    <!-- Fonts - Using system fonts for faster load -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,16 +16,13 @@
            CSS VARIABLES - Psychology-Backed Colors
            
            GREEN (#00C853): Trust, Growth, "Go" signal
-           - Triggers action, associated with positive decisions
            - 21% higher conversion on CTAs vs other colors
            
            GOLD (#FFD700): Achievement, Premium, Success  
            - Triggers feelings of accomplishment
-           - Associated with winning and first place
            
            DARK (#0A0A0A): Focus, Sophistication
            - Reduces cognitive load, makes content pop
-           - Gaming/esports aesthetic for target demo
            ============================================ */
         :root {
             --primary-green: #00C853;
@@ -83,8 +80,7 @@
         }
 
         /* ============================================
-           NAVIGATION - Sticky with Trust Signals
-           Psychology: Consistency & familiarity
+           NAVIGATION
            ============================================ */
         .nav {
             position: fixed;
@@ -112,20 +108,10 @@
             gap: 10px;
         }
 
-        .nav-logo-icon {
-            font-size: 1.8rem;
-        }
-
         .nav-logo-img {
             height: 48px;
             width: auto;
             border-radius: 8px;
-        }
-
-        .nav-logo-text {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.3rem;
-            letter-spacing: 1px;
         }
 
         .nav-cta {
@@ -144,11 +130,7 @@
         }
 
         /* ============================================
-           HERO - Above the fold conversion zone
-           Psychology: 
-           - Social proof numbers (850+, 5-Star)
-           - Urgency (World Cup 2026)
-           - Clear value proposition
+           HERO SECTION
            ============================================ */
         .hero {
             min-height: 100vh;
@@ -172,7 +154,6 @@
             }
         }
 
-        /* Urgency Badge - Psychology: Scarcity/Time pressure */
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -184,6 +165,12 @@
             font-size: 0.85rem;
             color: var(--primary-green);
             margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
         }
 
         .hero-title {
@@ -215,7 +202,6 @@
             }
         }
 
-        /* Stats - Psychology: Social proof with numbers */
         .hero-stats {
             display: flex;
             gap: 30px;
@@ -242,7 +228,6 @@
             letter-spacing: 1px;
         }
 
-        /* CTA Buttons - Psychology: Clear action, low friction */
         .hero-ctas {
             display: flex;
             gap: 12px;
@@ -293,7 +278,6 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
 
-        /* Hero Image */
         .hero-image {
             position: relative;
         }
@@ -320,8 +304,7 @@
         }
 
         /* ============================================
-           SOCIAL PROOF BAR - Trust signals
-           Psychology: Bandwagon effect, authority
+           SOCIAL PROOF BAR
            ============================================ */
         .proof-bar {
             background: var(--dark-card);
@@ -355,8 +338,7 @@
         }
 
         /* ============================================
-           FEATURES - Benefits over features
-           Psychology: What's in it for them
+           FEATURES WITH IMAGES - Psychology: Visual proof
            ============================================ */
         .features {
             padding: 80px 0;
@@ -393,16 +375,71 @@
             margin: 0 auto;
         }
 
+        /* Image-based feature cards */
+        .features-visual-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .features-visual-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-visual-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .feature-visual-card:hover {
+            transform: scale(1.02);
+        }
+
+        .feature-visual-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .feature-visual-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+        }
+
+        .feature-visual-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .feature-visual-desc {
+            font-size: 0.85rem;
+            color: var(--text-light-gray);
+        }
+
+        /* Small feature cards */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
         }
 
         .feature-card {
             background: var(--dark-card);
-            padding: 30px 25px;
-            border-radius: 16px;
+            padding: 25px 20px;
+            border-radius: 12px;
             border: 1px solid var(--border-subtle);
             text-align: center;
             transition: var(--transition);
@@ -415,35 +452,111 @@
         }
 
         .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(0, 200, 83, 0.1);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.8rem;
+            font-size: 2rem;
+            margin-bottom: 12px;
         }
 
         .feature-title {
-            font-size: 1.15rem;
+            font-size: 1rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .feature-desc {
             color: var(--text-gray);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         /* ============================================
-           PRODUCT SHOWCASE - Visual selling
-           Psychology: Show the product in use
+           HOW TO PLAY - Psychology: Reduce friction
+           ============================================ */
+        .how-to-play {
+            padding: 80px 0;
+            background: linear-gradient(180deg, var(--dark-bg) 0%, #0F1A0F 50%, var(--dark-bg) 100%);
+        }
+
+        .how-to-play-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .how-to-play-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .how-to-play-image img {
+            border-radius: 16px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .how-to-play-content h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .how-to-play-content p {
+            color: var(--text-light-gray);
+            margin-bottom: 30px;
+        }
+
+        .steps-list {
+            list-style: none;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        @media (max-width: 768px) {
+            .step-item {
+                text-align: left;
+            }
+        }
+
+        .step-item:last-child {
+            border-bottom: none;
+        }
+
+        .step-number {
+            width: 35px;
+            height: 35px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--dark-bg);
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .step-content p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* ============================================
+           PRODUCT SHOWCASE
            ============================================ */
         .showcase {
             padding: 80px 0;
-            background: linear-gradient(180deg, var(--dark-bg) 0%, #0F1A0F 50%, var(--dark-bg) 100%);
         }
 
         .showcase-grid {
@@ -523,8 +636,66 @@
         }
 
         /* ============================================
-           TESTIMONIALS - Social proof
-           Psychology: Peer validation, trust
+           LIFESTYLE GALLERY - Psychology: Mirror neurons
+           Show people enjoying = visitors imagine themselves
+           ============================================ */
+        .lifestyle {
+            padding: 80px 0;
+            background: var(--dark-card);
+        }
+
+        .lifestyle-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .lifestyle-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .lifestyle-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+        }
+
+        .lifestyle-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .lifestyle-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .lifestyle-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px 20px 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+        }
+
+        .lifestyle-caption h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+
+        .lifestyle-caption p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        /* ============================================
+           TESTIMONIALS
            ============================================ */
         .testimonials {
             padding: 80px 0;
@@ -584,9 +755,7 @@
         }
 
         /* ============================================
-           CTA SECTION - Final conversion push
-           Psychology: Reciprocity (free shipping), 
-           Urgency (limited), Authority (Amazon)
+           CTA SECTION
            ============================================ */
         .cta-section {
             padding: 80px 0;
@@ -709,7 +878,7 @@
     <nav class="nav">
         <div class="nav-container">
             <a href="#" class="nav-logo">
-                <img src="assets/logo.png?v=2" alt="Ultimate Soccer FC Logo" class="nav-logo-img">
+                <img src="assets/logo.png" alt="Ultimate Soccer FC Logo" class="nav-logo-img">
             </a>
             <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="nav-cta">Buy on Amazon →</a>
         </div>
@@ -721,7 +890,7 @@
             <div class="hero-grid">
                 <div class="hero-content">
                     <div class="hero-badge">
-                        ⚽ World Cup 2026 Edition Coming Soon
+                        🔥 World Cup 2026 Edition Coming Soon
                     </div>
                     <h1 class="hero-title">
                         THE ULTIMATE<br>
@@ -749,13 +918,13 @@
                         <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="btn-primary">
                             🛒 Buy Now on Amazon
                         </a>
-                        <a href="#product" class="btn-secondary">
+                        <a href="#how-to-play" class="btn-secondary">
                             See How It Works
                         </a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="assets/hero-main.jpg?v=2" alt="Ultimate Soccer Trivia Card Game">
+                    <img src="assets/hero-main.jpg" alt="Ultimate Soccer Trivia Card Game">
                     <div class="hero-image-badge">⭐ 5-Star Rated</div>
                 </div>
             </div>
@@ -786,7 +955,7 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features Section with Images -->
     <section class="features" id="features">
         <div class="container">
             <div class="section-header">
@@ -794,36 +963,97 @@
                 <h2 class="section-title">NOT YOUR AVERAGE TRIVIA GAME</h2>
                 <p class="section-subtitle">We built the game we always wanted but could never find — packed with content, actually challenging, and endlessly replayable.</p>
             </div>
+            
+            <!-- Visual Feature Cards with Real Photos -->
+            <div class="features-visual-grid">
+                <div class="feature-visual-card">
+                    <img src="assets/people-playing-1.jpg" alt="Friends playing soccer trivia">
+                    <div class="feature-visual-overlay">
+                        <h3 class="feature-visual-title">PERFECT FOR GAME NIGHTS</h3>
+                        <p class="feature-visual-desc">2-10 players, endless fun with friends and family</p>
+                    </div>
+                </div>
+                <div class="feature-visual-card">
+                    <img src="assets/cards-closeup.jpg" alt="Premium trivia cards">
+                    <div class="feature-visual-overlay">
+                        <h3 class="feature-visual-title">PREMIUM QUALITY</h3>
+                        <p class="feature-visual-desc">850+ cards on premium stock that lasts</p>
+                    </div>
+                </div>
+                <div class="feature-visual-card">
+                    <img src="assets/people-playing-2.jpg" alt="Family playing together">
+                    <div class="feature-visual-overlay">
+                        <h3 class="feature-visual-title">ALL SKILL LEVELS</h3>
+                        <p class="feature-visual-desc">Easy to expert — everyone can play and win</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Small Feature Cards -->
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🏆</div>
-                    <h3 class="feature-title">850+ Questions</h3>
-                    <p class="feature-desc">5-7x more content than any competitor. You won't see repeats for months of gameplay.</p>
+                    <h3 class="feature-title">5-7X More Content</h3>
+                    <p class="feature-desc">More questions than any competitor</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
                     <h3 class="feature-title">Quick Play Mode</h3>
-                    <p class="feature-desc">10-minute "Half Time" games perfect for watch parties and commercial breaks.</p>
+                    <p class="feature-desc">10-minute games during halftime</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🌍</div>
                     <h3 class="feature-title">Global Coverage</h3>
-                    <p class="feature-desc">World Cup, Premier League, La Liga, Serie A, MLS — every league that matters.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👶</div>
-                    <h3 class="feature-title">Family Friendly</h3>
-                    <p class="feature-desc">Questions range from easy to expert. Everyone can play, everyone can win.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎉</div>
-                    <h3 class="feature-title">Party Ready</h3>
-                    <p class="feature-desc">Supports 2-10 players. Split into teams for epic showdowns.</p>
+                    <p class="feature-desc">Every league that matters</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎁</div>
                     <h3 class="feature-title">Perfect Gift</h3>
-                    <p class="feature-desc">Premium packaging. Great for birthdays, Father's Day, and holidays.</p>
+                    <p class="feature-desc">Premium packaging, ready to gift</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How To Play Section -->
+    <section class="how-to-play" id="how-to-play">
+        <div class="container">
+            <div class="how-to-play-grid">
+                <div class="how-to-play-image">
+                    <img src="assets/how-to-play.png" alt="How to play Ultimate Soccer Trivia">
+                </div>
+                <div class="how-to-play-content">
+                    <span class="section-label">Easy to Learn</span>
+                    <h2>START PLAYING<br><span class="highlight-green">IN 2 MINUTES</span></h2>
+                    <p>No complicated rules. No setup hassle. Just grab the cards and start testing your soccer knowledge.</p>
+                    
+                    <ul class="steps-list">
+                        <li class="step-item">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h4>Split Into Teams</h4>
+                                <p>Divide players into 2+ teams or play individually</p>
+                            </div>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h4>Draw a Card</h4>
+                                <p>Read the question aloud to the opposing team</p>
+                            </div>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h4>Answer & Score</h4>
+                                <p>Correct answer = 1 point. First to 10 wins!</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="btn-primary" style="margin-top: 20px;">
+                        Get Your Game Today →
+                    </a>
                 </div>
             </div>
         </div>
@@ -834,9 +1064,9 @@
         <div class="container">
             <div class="showcase-grid">
                 <div class="showcase-images">
-                    <img src="assets/game-box.jpg?v=2" alt="Game box and cards" loading="lazy">
-                    <img src="assets/gameplay-1.jpg?v=2" alt="Gameplay example" loading="lazy">
-                    <img src="assets/cards-closeup.jpg?v=2" alt="Cards close up" loading="lazy">
+                    <img src="assets/game-box.jpg" alt="Game box and cards" loading="lazy">
+                    <img src="assets/gameplay-1.jpg" alt="Gameplay example" loading="lazy">
+                    <img src="assets/cards-closeup.jpg" alt="Cards close up" loading="lazy">
                 </div>
                 <div class="showcase-content">
                     <h2>EVERYTHING YOU NEED<br><span class="highlight-green">IN ONE BOX</span></h2>
@@ -866,6 +1096,40 @@
                     <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="btn-primary">
                         Get Yours Today →
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifestyle Gallery - Psychology: Mirror Neurons -->
+    <section class="lifestyle">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Join The Fun</span>
+                <h2 class="section-title">MADE FOR REAL SOCCER FANS</h2>
+                <p class="section-subtitle">Watch parties, family game nights, tailgates — wherever there's soccer, there's trivia.</p>
+            </div>
+            <div class="lifestyle-grid">
+                <div class="lifestyle-card">
+                    <img src="assets/people-playing-1.jpg" alt="Friends enjoying soccer trivia" loading="lazy">
+                    <div class="lifestyle-caption">
+                        <h3>WATCH PARTY ESSENTIAL</h3>
+                        <p>Perfect during halftime or before kickoff</p>
+                    </div>
+                </div>
+                <div class="lifestyle-card">
+                    <img src="assets/people-playing-2.jpg" alt="Family game night" loading="lazy">
+                    <div class="lifestyle-caption">
+                        <h3>FAMILY GAME NIGHT</h3>
+                        <p>Questions for all ages and skill levels</p>
+                    </div>
+                </div>
+                <div class="lifestyle-card">
+                    <img src="assets/people-playing-3.jpg" alt="Friends competing" loading="lazy">
+                    <div class="lifestyle-caption">
+                        <h3>SETTLE THE DEBATE</h3>
+                        <p>Who REALLY knows soccer best?</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -925,7 +1189,7 @@
             <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="btn-dark">
                 🛒 Buy Now on Amazon — $29.99
             </a>
-            <p class="cta-guarantee">✓ Free shipping with Prime &nbsp;|&nbsp; ✓ 30-day returns</p>
+            <p class="cta-guarantee">✓ Free shipping with Prime &nbsp;|&nbsp; ✓ 30-day returns &nbsp;|&nbsp; ✓ 5-Star rated</p>
         </div>
     </section>
 
@@ -934,7 +1198,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="assets/logo.png?v=2" alt="Ultimate Soccer FC Logo" style="height: 50px; margin-bottom: 15px;">
+                    <img src="assets/logo.png" alt="Ultimate Soccer FC Logo" style="height: 50px; margin-bottom: 15px;">
                     <p>The ultimate trivia experience for soccer fans. 850+ questions to test your knowledge and settle debates once and for all.</p>
                 </div>
                 <div class="footer-col">
@@ -945,11 +1209,11 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4 class="footer-title">Follow Us</h4>
+                    <h4 class="footer-title">Connect</h4>
                     <ul class="footer-links">
                         <li><a href="#">Instagram</a></li>
                         <li><a href="#">TikTok</a></li>
-                        <li><a href="#">YouTube</a></li>
+                        <li><a href="mailto:info@ultimatesoccerfc.com">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
