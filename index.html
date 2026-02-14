@@ -910,6 +910,145 @@
         }
 
         /* ============================================
+           WORLD CUP COUNTDOWN - Psychology: Urgency
+           ============================================ */
+        .countdown-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1a0a00 50%, #0A0A0A 100%);
+            text-align: center;
+            border-top: 2px solid var(--accent-gold);
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: var(--dark-card);
+            border: 1px solid var(--accent-gold);
+            border-radius: 12px;
+            padding: 20px 30px;
+            min-width: 100px;
+        }
+
+        .countdown-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: var(--accent-gold);
+            display: block;
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .countdown-cta {
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* ============================================
+           PRODUCT GALLERY
+           ============================================ */
+        .product-gallery {
+            padding: 80px 0;
+            background: var(--dark-bg);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 250px);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+            .gallery-large {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+        }
+
+        /* ============================================
+           EXPANDED LIFESTYLE GRID
+           ============================================ */
+        .lifestyle-grid-expanded {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 300px);
+            gap: 15px;
+        }
+
+        .lifestyle-grid-expanded .lifestyle-large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .lifestyle-grid-expanded .lifestyle-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .lifestyle-grid-expanded .lifestyle-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .lifestyle-grid-expanded .lifestyle-card:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .lifestyle-grid-expanded {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            .lifestyle-grid-expanded .lifestyle-large {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+
+        /* ============================================
            FAQ SECTION - SEO Optimized
            ============================================ */
         .faq {
@@ -1254,6 +1393,67 @@
         </div>
     </section>
 
+    <!-- World Cup 2026 Countdown - Psychology: Urgency & Anticipation -->
+    <section class="countdown-section">
+        <div class="container">
+            <div class="countdown-content">
+                <span class="section-label" style="background: rgba(255,215,0,0.2); color: var(--accent-gold);">🏆 Limited Time</span>
+                <h2 class="section-title">WORLD CUP 2026 IS COMING</h2>
+                <p class="section-subtitle">Get ready for the biggest soccer event in US history. June 11 - July 19, 2026.</p>
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">117</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">14</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">32</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">48</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+                <p class="countdown-cta">🎁 FREE World Cup 2026 Expansion Pack for all owners!</p>
+                <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="btn-primary">
+                    Get Yours Before World Cup →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Gallery - Psychology: Visual Proof & Trust -->
+    <section class="product-gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The Product</span>
+                <h2 class="section-title">SEE WHAT'S INSIDE</h2>
+                <p class="section-subtitle">Premium quality cards, professional design, built to last.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-large">
+                    <img src="assets/game-box.jpg" alt="Ultimate Soccer Trivia Game Box" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/cards-closeup.jpg" alt="Trivia cards close up" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/product-detail.png" alt="Product detail shot" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gameplay-instructions.png" alt="Easy gameplay instructions" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/product-box.png" alt="Game box packaging" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Lifestyle Gallery - Psychology: Mirror Neurons -->
     <section class="lifestyle">
         <div class="container">
@@ -1262,26 +1462,40 @@
                 <h2 class="section-title">MADE FOR REAL SOCCER FANS</h2>
                 <p class="section-subtitle">Watch parties, family game nights, tailgates — wherever there's soccer, there's trivia.</p>
             </div>
-            <div class="lifestyle-grid">
+            <div class="lifestyle-grid-expanded">
+                <div class="lifestyle-card lifestyle-large">
+                    <img src="assets/lifestyle-1.jpg" alt="Friends enjoying soccer trivia at party" loading="lazy">
+                    <div class="lifestyle-caption">
+                        <h3>THE ULTIMATE PARTY GAME</h3>
+                        <p>Bring everyone together over soccer</p>
+                    </div>
+                </div>
                 <div class="lifestyle-card">
                     <img src="assets/people-playing-1.jpg" alt="Friends enjoying soccer trivia" loading="lazy">
                     <div class="lifestyle-caption">
                         <h3>WATCH PARTY ESSENTIAL</h3>
-                        <p>Perfect during halftime or before kickoff</p>
+                        <p>Perfect during halftime</p>
                     </div>
                 </div>
                 <div class="lifestyle-card">
                     <img src="assets/people-playing-2.jpg" alt="Family game night" loading="lazy">
                     <div class="lifestyle-caption">
                         <h3>FAMILY GAME NIGHT</h3>
-                        <p>Questions for all ages and skill levels</p>
+                        <p>Questions for all ages</p>
+                    </div>
+                </div>
+                <div class="lifestyle-card">
+                    <img src="assets/lifestyle-2.jpg" alt="Friends competing at trivia" loading="lazy">
+                    <div class="lifestyle-caption">
+                        <h3>FRIENDLY COMPETITION</h3>
+                        <p>Who knows soccer best?</p>
                     </div>
                 </div>
                 <div class="lifestyle-card">
                     <img src="assets/people-playing-3.jpg" alt="Friends competing" loading="lazy">
                     <div class="lifestyle-caption">
                         <h3>SETTLE THE DEBATE</h3>
-                        <p>Who REALLY knows soccer best?</p>
+                        <p>Prove your soccer knowledge</p>
                     </div>
                 </div>
             </div>
@@ -1442,5 +1656,30 @@
             </div>
         </div>
     </footer>
+
+    <!-- World Cup Countdown Timer Script -->
+    <script>
+        // World Cup 2026 starts June 11, 2026
+        const worldCupDate = new Date('June 11, 2026 00:00:00').getTime();
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = worldCupDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+        
+        // Update countdown every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>
