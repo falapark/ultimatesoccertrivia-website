@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ultimate Soccer Trivia Card Game - 850+ questions to test your soccer knowledge. Perfect for watch parties, family game nights, and true fans.">
+    <title>Ultimate Soccer Trivia | The #1 Soccer Trivia Card Game</title>
+    
+    <!-- Fonts - Using system fonts for faster load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================
+           CSS VARIABLES - Psychology-Backed Colors
+           
+           GREEN (#00C853): Trust, Growth, "Go" signal
+           - Triggers action, associated with positive decisions
+           - 21% higher conversion on CTAs vs other colors
+           
+           GOLD (#FFD700): Achievement, Premium, Success  
+           - Triggers feelings of accomplishment
+           - Associated with winning and first place
+           
+           DARK (#0A0A0A): Focus, Sophistication
+           - Reduces cognitive load, makes content pop
+           - Gaming/esports aesthetic for target demo
+           ============================================ */
+        :root {
+            --primary-green: #00C853;
+            --primary-green-dark: #00A844;
+            --primary-green-glow: rgba(0, 200, 83, 0.4);
+            --accent-gold: #FFD700;
+            --accent-gold-dark: #E6C200;
+            --dark-bg: #0A0A0A;
+            --dark-card: #141414;
+            --dark-card-hover: #1C1C1C;
+            --text-white: #FFFFFF;
+            --text-gray: #9CA3AF;
+            --text-light-gray: #E5E7EB;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --shadow-glow: 0 0 30px var(--primary-green-glow);
+            --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+            --transition: all 0.3s ease;
+        }
+
+        /* RESET */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ============================================
+           NAVIGATION - Sticky with Trust Signals
+           Psychology: Consistency & familiarity
+           ============================================ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo-icon {
+            font-size: 1.8rem;
+        }
+
+        .nav-logo-img {
+            height: 48px;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        .nav-logo-text {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-cta {
+            background: var(--primary-green);
+            color: var(--dark-bg);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-green-dark);
+            transform: translateY(-1px);
+        }
+
+        /* ============================================
+           HERO - Above the fold conversion zone
+           Psychology: 
+           - Social proof numbers (850+, 5-Star)
+           - Urgency (World Cup 2026)
+           - Clear value proposition
+           ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0 60px;
+            background: linear-gradient(180deg, #0A0A0A 0%, #0F1A0F 50%, #0A0A0A 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* Urgency Badge - Psychology: Scarcity/Time pressure */
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 200, 83, 0.15);
+            border: 1px solid rgba(0, 200, 83, 0.3);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.8rem, 7vw, 4.5rem);
+            line-height: 1.05;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .highlight-green {
+            color: var(--primary-green);
+        }
+
+        .highlight-gold {
+            color: var(--accent-gold);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light-gray);
+            margin-bottom: 25px;
+            max-width: 480px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-subtitle {
+                margin: 0 auto 25px;
+            }
+        }
+
+        /* Stats - Psychology: Social proof with numbers */
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-stats {
+                justify-content: center;
+            }
+        }
+
+        .hero-stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            color: var(--accent-gold);
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* CTA Buttons - Psychology: Clear action, low friction */
+        .hero-ctas {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .hero-ctas {
+                justify-content: center;
+            }
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-green);
+            color: var(--dark-bg);
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-green-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 0 40px var(--primary-green-glow);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--text-white);
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: 1px solid var(--border-subtle);
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero Image */
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: 16px;
+            box-shadow: var(--shadow-card);
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .hero-image-badge {
+            position: absolute;
+            bottom: -15px;
+            right: 10%;
+            background: var(--accent-gold);
+            color: var(--dark-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* ============================================
+           SOCIAL PROOF BAR - Trust signals
+           Psychology: Bandwagon effect, authority
+           ============================================ */
+        .proof-bar {
+            background: var(--dark-card);
+            padding: 20px 0;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .proof-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .proof-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .proof-icon {
+            font-size: 1.2rem;
+        }
+
+        .stars {
+            color: var(--accent-gold);
+        }
+
+        /* ============================================
+           FEATURES - Benefits over features
+           Psychology: What's in it for them
+           ============================================ */
+        .features {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: rgba(0, 200, 83, 0.1);
+            color: var(--primary-green);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            color: var(--text-gray);
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: var(--dark-card);
+            padding: 30px 25px;
+            border-radius: 16px;
+            border: 1px solid var(--border-subtle);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            background: var(--dark-card-hover);
+            border-color: rgba(0, 200, 83, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 200, 83, 0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+        }
+
+        .feature-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .feature-desc {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* ============================================
+           PRODUCT SHOWCASE - Visual selling
+           Psychology: Show the product in use
+           ============================================ */
+        .showcase {
+            padding: 80px 0;
+            background: linear-gradient(180deg, var(--dark-bg) 0%, #0F1A0F 50%, var(--dark-bg) 100%);
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .showcase-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .showcase-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .showcase-images img {
+            border-radius: 12px;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+        }
+
+        .showcase-images img:first-child {
+            grid-column: span 2;
+        }
+
+        .showcase-images img:hover {
+            transform: scale(1.02);
+        }
+
+        .showcase-content h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .showcase-content p {
+            color: var(--text-light-gray);
+            margin-bottom: 25px;
+        }
+
+        .showcase-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .showcase-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .showcase-list li:last-child {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            width: 22px;
+            height: 22px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-bg);
+            font-size: 0.7rem;
+            flex-shrink: 0;
+        }
+
+        /* ============================================
+           TESTIMONIALS - Social proof
+           Psychology: Peer validation, trust
+           ============================================ */
+        .testimonials {
+            padding: 80px 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .testimonial-card {
+            background: var(--dark-card);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .testimonial-stars {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            color: var(--text-light-gray);
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 45px;
+            height: 45px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--dark-bg);
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+        }
+
+        .testimonial-verified {
+            font-size: 0.8rem;
+            color: var(--primary-green);
+        }
+
+        /* ============================================
+           CTA SECTION - Final conversion push
+           Psychology: Reciprocity (free shipping), 
+           Urgency (limited), Authority (Amazon)
+           ============================================ */
+        .cta-section {
+            padding: 80px 0;
+            background: var(--primary-green);
+            text-align: center;
+        }
+
+        .cta-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--dark-bg);
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .cta-subtitle {
+            color: rgba(0, 0, 0, 0.7);
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-dark {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--dark-bg);
+            color: var(--text-white);
+            padding: 18px 40px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .btn-dark:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-guarantee {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--dark-card);
+            padding: 50px 0 30px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .footer-brand p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-brand p {
+                margin: 0 auto;
+            }
+        }
+
+        .footer-title {
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 25px;
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="assets/logo.png?v=2" alt="Ultimate Soccer FC Logo" class="nav-logo-img">
+            </a>
+            <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="nav-cta">Buy on Amazon →</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        ⚽ World Cup 2026 Edition Coming Soon
+                    </div>
+                    <h1 class="hero-title">
+                        THE ULTIMATE<br>
+                        <span class="highlight-green">SOCCER TRIVIA</span><br>
+                        CARD GAME
+                    </h1>
+                    <p class="hero-subtitle">
+                        850+ challenging questions that will test even the most die-hard soccer fans. Perfect for watch parties, game nights, and settling debates once and for all.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">850+</div>
+                            <div class="hero-stat-label">Questions</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">5-7X</div>
+                            <div class="hero-stat-label">More Than Others</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">2-10</div>
+                            <div class="hero-stat-label">Players</div>
+                        </div>
+                    </div>
+                    <div class="hero-ctas">
+                        <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="btn-primary">
+                            🛒 Buy Now on Amazon
+                        </a>
+                        <a href="#product" class="btn-secondary">
+                            See How It Works
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/hero-main.jpg?v=2" alt="Ultimate Soccer Trivia Card Game">
+                    <div class="hero-image-badge">⭐ 5-Star Rated</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="proof-bar">
+        <div class="container">
+            <div class="proof-items">
+                <div class="proof-item">
+                    <span class="stars">★★★★★</span>
+                    <span>5.0 on Amazon</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-icon">🎯</span>
+                    <span>850+ Unique Questions</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-icon">👨‍👩‍👧‍👦</span>
+                    <span>Perfect for All Ages</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-icon">🚚</span>
+                    <span>Free Prime Shipping</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Why Choose Us</span>
+                <h2 class="section-title">NOT YOUR AVERAGE TRIVIA GAME</h2>
+                <p class="section-subtitle">We built the game we always wanted but could never find — packed with content, actually challenging, and endlessly replayable.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3 class="feature-title">850+ Questions</h3>
+                    <p class="feature-desc">5-7x more content than any competitor. You won't see repeats for months of gameplay.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Quick Play Mode</h3>
+                    <p class="feature-desc">10-minute "Half Time" games perfect for watch parties and commercial breaks.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">Global Coverage</h3>
+                    <p class="feature-desc">World Cup, Premier League, La Liga, Serie A, MLS — every league that matters.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👶</div>
+                    <h3 class="feature-title">Family Friendly</h3>
+                    <p class="feature-desc">Questions range from easy to expert. Everyone can play, everyone can win.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎉</div>
+                    <h3 class="feature-title">Party Ready</h3>
+                    <p class="feature-desc">Supports 2-10 players. Split into teams for epic showdowns.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3 class="feature-title">Perfect Gift</h3>
+                    <p class="feature-desc">Premium packaging. Great for birthdays, Father's Day, and holidays.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="showcase" id="product">
+        <div class="container">
+            <div class="showcase-grid">
+                <div class="showcase-images">
+                    <img src="assets/game-box.jpg?v=2" alt="Game box and cards" loading="lazy">
+                    <img src="assets/gameplay-1.jpg?v=2" alt="Gameplay example" loading="lazy">
+                    <img src="assets/cards-closeup.jpg?v=2" alt="Cards close up" loading="lazy">
+                </div>
+                <div class="showcase-content">
+                    <h2>EVERYTHING YOU NEED<br><span class="highlight-green">IN ONE BOX</span></h2>
+                    <p>Premium quality cards, clear instructions, and enough content to keep you playing for years. No app required, no batteries needed — just pure trivia fun.</p>
+                    <ul class="showcase-list">
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>850+ trivia questions across all difficulty levels</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Premium card stock that lasts</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Score cards and quick-start guide included</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Compact box — travels anywhere</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Free World Cup 2026 expansion (coming soon!)</span>
+                        </li>
+                    </ul>
+                    <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="btn-primary">
+                        Get Yours Today →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Reviews</span>
+                <h2 class="section-title">WHAT FANS ARE SAYING</h2>
+                <p class="section-subtitle">Real reviews from real soccer fans who've put our game to the test.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Finally, a soccer trivia game with REAL depth. My friends and I have played for hours and we're not even close to seeing all the questions. Worth every penny."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JM</div>
+                        <div>
+                            <div class="testimonial-name">James M.</div>
+                            <div class="testimonial-verified">✓ Verified Purchase</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Bought this for my husband's birthday — now it's our go-to for every watch party. The whole family can play together. Even my 10-year-old wins sometimes!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SK</div>
+                        <div>
+                            <div class="testimonial-name">Sarah K.</div>
+                            <div class="testimonial-verified">✓ Verified Purchase</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"I thought I knew soccer. This game humbled me fast. The questions actually challenge you — it's not just 'who won the World Cup in 2018' stuff."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">DR</div>
+                        <div>
+                            <div class="testimonial-name">David R.</div>
+                            <div class="testimonial-verified">✓ Verified Purchase</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">READY TO PROVE<br>YOU'RE THE REAL FAN?</h2>
+            <p class="cta-subtitle">Join thousands of soccer fans who've made Ultimate Soccer Trivia their game night essential.</p>
+            <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="btn-dark">
+                🛒 Buy Now on Amazon — $29.99
+            </a>
+            <p class="cta-guarantee">✓ Free shipping with Prime &nbsp;|&nbsp; ✓ 30-day returns</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.png?v=2" alt="Ultimate Soccer FC Logo" style="height: 50px; margin-bottom: 15px;">
+                    <p>The ultimate trivia experience for soccer fans. 850+ questions to test your knowledge and settle debates once and for all.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank">Buy on Amazon</a></li>
+                        <li><a href="#">Expansion Packs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Follow Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">TikTok</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Ultimate Soccer FC LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
