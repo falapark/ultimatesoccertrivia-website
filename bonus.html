@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus Content - Ultimate Soccer Trivia</title>
+    <meta name="description" content="Exclusive bonus game modes and how to play Ultimate Soccer Trivia card game.">
+    <link rel="canonical" href="https://ultimatesoccertrivia.com/bonus">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 32px;
+            color: white;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 14px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #d4af37;
+            color: #1a1a2e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .card h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            color: #16a34a;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card h3 {
+            font-size: 16px;
+            color: #15803d;
+            margin: 15px 0 8px 0;
+        }
+        
+        .card p, .card li {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #444;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        
+        .card li {
+            margin-bottom: 6px;
+        }
+        
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .steps li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+        }
+        
+        .steps li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: #16a34a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        
+        .bonus-mode {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #16a34a;
+        }
+        
+        .bonus-mode.gold {
+            border-left-color: #d4af37;
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+        }
+        
+        .bonus-mode.orange {
+            border-left-color: #f97316;
+            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+        }
+        
+        .bonus-mode.purple {
+            border-left-color: #7c3aed;
+            background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%);
+        }
+        
+        .bonus-mode.blue {
+            border-left-color: #2563eb;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+        
+        .bonus-mode.red {
+            border-left-color: #dc2626;
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+        }
+        
+        .bonus-mode h4 {
+            font-size: 16px;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .bonus-mode p {
+            font-size: 13px;
+            margin: 0;
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .category {
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            font-size: 12px;
+        }
+        
+        .category.players { background: #f97316; }
+        .category.managers { background: #7c3aed; }
+        .category.clubs { background: #2563eb; }
+        .category.international { background: #16a34a; }
+        .category.challenge { background: #dc2626; }
+        .category.geography { background: #059669; }
+        .category.guess { background: #92400e; }
+        
+        .cta {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 16px;
+            margin: 20px 0;
+        }
+        
+        .cta h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 22px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .cta a {
+            display: inline-block;
+            background: #d4af37;
+            color: #1a1a2e;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: rgba(255,255,255,0.6);
+            font-size: 12px;
+        }
+        
+        .footer a {
+            color: #16a34a;
+            text-decoration: none;
+        }
+        
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .social a {
+            color: white;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 400px) {
+            .categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>⚽ ULTIMATE SOCCER TRIVIA</h1>
+        <p>Thank you for your purchase!</p>
+        <div class="badge">🎁 EXCLUSIVE BONUS CONTENT</div>
+    </header>
+    
+    <div class="container">
+        <!-- Quick Start -->
+        <div class="card">
+            <h2>🚀 Quick Start Guide</h2>
+            <p>Get playing in under 2 minutes!</p>
+            
+            <h3>What's in the Box</h3>
+            <ul>
+                <li><strong>350 Trivia Cards</strong> with 1,000+ questions</li>
+                <li><strong>3 Selection Cards</strong> for choosing categories</li>
+                <li><strong>1 Gameplay Guide</strong></li>
+                <li><strong>1 Scorecard Reference</strong></li>
+            </ul>
+            
+            <h3>Basic Rules</h3>
+            <ol class="steps">
+                <li>Shuffle the deck and place it face-down</li>
+                <li>Youngest player goes first and picks a category</li>
+                <li>Another player reads the question aloud</li>
+                <li>Answer within 30 seconds — correct = keep the card!</li>
+                <li>First to 10 cards (or most cards when deck runs out) wins!</li>
+            </ol>
+        </div>
+        
+        <!-- Categories -->
+        <div class="card">
+            <h2>📚 7 Categories</h2>
+            <p>Test your knowledge across all areas of the beautiful game:</p>
+            
+            <div class="categories">
+                <div class="category players">⭐ PLAYERS</div>
+                <div class="category managers">👔 MANAGERS</div>
+                <div class="category clubs">🏟️ CLUBS</div>
+                <div class="category international">🌍 INTERNATIONAL</div>
+                <div class="category challenge">💬 CHALLENGE</div>
+                <div class="category geography">📍 GEOGRAPHY</div>
+                <div class="category guess">🎯 GUESS THE</div>
+            </div>
+        </div>
+        
+        <!-- Bonus Game Modes -->
+        <div class="card">
+            <h2>🎮 6 Bonus Game Modes</h2>
+            <p>Spice up your game nights with these exclusive variants!</p>
+            
+            <div class="bonus-mode gold">
+                <h4>⏱️ Halftime Mode</h4>
+                <p><strong>Best for:</strong> Quick 10-minute games. Play to just 5 cards instead of 10 — perfect for halftime during a real match!</p>
+            </div>
+            
+            <div class="bonus-mode orange">
+                <h4>⚡ Penalty Shootout</h4>
+                <p><strong>Best for:</strong> Tiebreakers. Each player gets 5 questions. Most correct answers wins. If still tied, sudden death!</p>
+            </div>
+            
+            <div class="bonus-mode purple">
+                <h4>📺 VAR Card</h4>
+                <p><strong>Best for:</strong> Disputes. Once per game, challenge an answer! Group votes — if you're right, steal the card. If wrong, opponent gets 2 cards.</p>
+            </div>
+            
+            <div class="bonus-mode blue">
+                <h4>👥 Team Play</h4>
+                <p><strong>Best for:</strong> Parties. Split into teams of 2-4. Team members can huddle for 15 seconds before answering. First team to 15 cards wins!</p>
+            </div>
+            
+            <div class="bonus-mode">
+                <h4>🎲 Double or Nothing</h4>
+                <p><strong>Best for:</strong> Risk-takers. Before hearing the question, declare "Double!" If correct, earn 2 cards. If wrong, lose 1 card from your pile.</p>
+            </div>
+            
+            <div class="bonus-mode red">
+                <h4>🔥 Hot Streak</h4>
+                <p><strong>Best for:</strong> Comebacks. Answer 3 in a row correctly? BONUS: Steal any 1 card from an opponent's pile!</p>
+            </div>
+        </div>
+        
+        <!-- Pro Tips -->
+        <div class="card">
+            <h2>💡 Pro Tips</h2>
+            <ul>
+                <li><strong>Mix categories</strong> — Don't let anyone camp on their strong suit!</li>
+                <li><strong>Use a timer</strong> — 30 seconds keeps the game moving</li>
+                <li><strong>House rules welcome</strong> — Make it your own!</li>
+                <li><strong>World Cup 2026</strong> — Perfect for watch parties this summer!</li>
+            </ul>
+        </div>
+        
+        <!-- CTA -->
+        <div class="cta">
+            <h3>🌟 Love the Game?</h3>
+            <p>Leave a review on Amazon — it helps us create more content!</p>
+            <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank">Review on Amazon →</a>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Ultimate Soccer FC LLC</p>
+            <p><a href="https://ultimatesoccertrivia.com">ultimatesoccertrivia.com</a></p>
+            <div class="social">
+                <a href="https://tiktok.com/@ultimatesoccerfc" target="_blank">TikTok</a>
+                <a href="https://instagram.com/ultimatesoccerfc" target="_blank">Instagram</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
