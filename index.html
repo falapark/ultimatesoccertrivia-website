@@ -130,9 +130,9 @@
             --primary-green-glow: rgba(0, 200, 83, 0.4);
             --accent-gold: #FFD700;
             --accent-gold-dark: #E6C200;
-            --dark-bg: #0A0A0A;
-            --dark-card: #141414;
-            --dark-card-hover: #1C1C1C;
+            --dark-bg: #121212;
+            --dark-card: #1A1A1A;
+            --dark-card-hover: #222222;
             --text-white: #FFFFFF;
             --text-gray: #9CA3AF;
             --text-light-gray: #E5E7EB;
@@ -140,6 +140,15 @@
             --shadow-glow: 0 0 30px var(--primary-green-glow);
             --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
             --transition: all 0.3s ease;
+            /* Category colors */
+            --cat-international: #ECC94B;
+            --cat-players: #B85CF6;
+            --cat-challenge: #E53E3E;
+            --cat-geography: #48BB78;
+            --cat-clubs: #3182CE;
+            --cat-managers: #ED8936;
+            --cat-guessthe: #DD6B20;
+            --cat-random: #38A169;
         }
 
         /* RESET */
@@ -156,6 +165,7 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--dark-bg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             color: var(--text-white);
             line-height: 1.6;
             overflow-x: hidden;
@@ -188,7 +198,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(18, 18, 18, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-subtle);
         }
@@ -243,7 +253,7 @@
             display: flex;
             align-items: center;
             padding: 100px 0 60px;
-            background: linear-gradient(180deg, #0A0A0A 0%, #0F1A0F 50%, #0A0A0A 100%);
+            background: linear-gradient(180deg, #121212 0%, #0F1A0F 50%, #121212 100%);
         }
 
         .hero-grid {
@@ -363,7 +373,7 @@
         .btn-primary:hover {
             background: var(--primary-green-dark);
             transform: translateY(-2px);
-            box-shadow: 0 0 40px var(--primary-green-glow);
+            box-shadow: 0 0 40px var(--primary-green-glow), 0 0 80px rgba(0, 200, 83, 0.2);
         }
 
         .btn-secondary {
@@ -575,9 +585,17 @@
 
         .feature-card:hover {
             background: var(--dark-card-hover);
-            border-color: rgba(0, 200, 83, 0.2);
             transform: translateY(-3px);
         }
+
+        .feature-card:nth-child(1) { border-color: rgba(236, 201, 75, 0.3); }
+        .feature-card:nth-child(2) { border-color: rgba(184, 92, 246, 0.3); }
+        .feature-card:nth-child(3) { border-color: rgba(49, 130, 206, 0.3); }
+        .feature-card:nth-child(4) { border-color: rgba(237, 137, 54, 0.3); }
+        .feature-card:nth-child(1):hover { border-color: var(--cat-international); box-shadow: 0 0 20px rgba(236, 201, 75, 0.2); }
+        .feature-card:nth-child(2):hover { border-color: var(--cat-players); box-shadow: 0 0 20px rgba(184, 92, 246, 0.2); }
+        .feature-card:nth-child(3):hover { border-color: var(--cat-clubs); box-shadow: 0 0 20px rgba(49, 130, 206, 0.2); }
+        .feature-card:nth-child(4):hover { border-color: var(--cat-managers); box-shadow: 0 0 20px rgba(237, 137, 54, 0.2); }
 
         .feature-icon {
             font-size: 2rem;
@@ -600,7 +618,7 @@
            ============================================ */
         .how-to-play {
             padding: 80px 0;
-            background: linear-gradient(180deg, var(--dark-bg) 0%, #0F1A0F 50%, var(--dark-bg) 100%);
+            background: linear-gradient(180deg, var(--dark-bg) 0%, #101a10 50%, var(--dark-bg) 100%);
         }
 
         .how-to-play-grid {
@@ -936,7 +954,7 @@
            ============================================ */
         .countdown-section {
             padding: 80px 0;
-            background: linear-gradient(135deg, #0A0A0A 0%, #1a0a00 50%, #0A0A0A 100%);
+            background: linear-gradient(135deg, #121212 0%, #1a0a00 50%, #121212 100%);
             text-align: center;
             border-top: 2px solid var(--accent-gold);
             border-bottom: 2px solid var(--accent-gold);
@@ -1185,6 +1203,126 @@
             color: var(--text-gray);
             font-size: 0.85rem;
         }
+        /* ============================================
+           CATEGORIES SECTION
+           ============================================ */
+        .categories {
+            padding: 80px 0;
+            background: var(--dark-card);
+            position: relative;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+
+        .category-card-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .category-icon-box {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .category-icon-box:hover {
+            transform: scale(1.05);
+        }
+
+        .category-icon-box img {
+            width: 40%;
+            height: 40%;
+            filter: brightness(0) invert(1);
+        }
+
+        .category-card-label {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        /* Category-specific colors */
+        .cat-international .category-icon-box { background: rgba(236, 201, 75, 0.12); border-color: var(--cat-international); box-shadow: 0 0 15px rgba(236, 201, 75, 0.3); }
+        .cat-international .category-card-label { color: var(--cat-international); }
+        .cat-international .category-icon-box:hover { box-shadow: 0 0 25px rgba(236, 201, 75, 0.5); }
+
+        .cat-players .category-icon-box { background: rgba(184, 92, 246, 0.12); border-color: var(--cat-players); box-shadow: 0 0 15px rgba(184, 92, 246, 0.3); }
+        .cat-players .category-card-label { color: var(--cat-players); }
+        .cat-players .category-icon-box:hover { box-shadow: 0 0 25px rgba(184, 92, 246, 0.5); }
+
+        .cat-challenge .category-icon-box { background: rgba(229, 62, 62, 0.12); border-color: var(--cat-challenge); box-shadow: 0 0 15px rgba(229, 62, 62, 0.3); }
+        .cat-challenge .category-card-label { color: var(--cat-challenge); }
+        .cat-challenge .category-icon-box:hover { box-shadow: 0 0 25px rgba(229, 62, 62, 0.5); }
+
+        .cat-geography .category-icon-box { background: rgba(72, 187, 120, 0.12); border-color: var(--cat-geography); box-shadow: 0 0 15px rgba(72, 187, 120, 0.3); }
+        .cat-geography .category-card-label { color: var(--cat-geography); }
+        .cat-geography .category-icon-box:hover { box-shadow: 0 0 25px rgba(72, 187, 120, 0.5); }
+
+        .cat-clubs .category-icon-box { background: rgba(49, 130, 206, 0.12); border-color: var(--cat-clubs); box-shadow: 0 0 15px rgba(49, 130, 206, 0.3); }
+        .cat-clubs .category-card-label { color: var(--cat-clubs); }
+        .cat-clubs .category-icon-box:hover { box-shadow: 0 0 25px rgba(49, 130, 206, 0.5); }
+
+        .cat-managers .category-icon-box { background: rgba(237, 137, 54, 0.12); border-color: var(--cat-managers); box-shadow: 0 0 15px rgba(237, 137, 54, 0.3); }
+        .cat-managers .category-card-label { color: var(--cat-managers); }
+        .cat-managers .category-icon-box:hover { box-shadow: 0 0 25px rgba(237, 137, 54, 0.5); }
+
+        .cat-guessthe .category-icon-box { background: rgba(221, 107, 32, 0.12); border-color: var(--cat-guessthe); box-shadow: 0 0 15px rgba(221, 107, 32, 0.3); }
+        .cat-guessthe .category-card-label { color: var(--cat-guessthe); }
+        .cat-guessthe .category-icon-box:hover { box-shadow: 0 0 25px rgba(221, 107, 32, 0.5); }
+
+        .cat-random .category-icon-box { background: rgba(56, 161, 105, 0.12); border-color: var(--cat-random); box-shadow: 0 0 15px rgba(56, 161, 105, 0.3); }
+        .cat-random .category-card-label { color: var(--cat-random); }
+        .cat-random .category-icon-box:hover { box-shadow: 0 0 25px rgba(56, 161, 105, 0.5); }
+
+        @keyframes catPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+
+        .category-icon-box {
+            animation: catPulse 3s ease-in-out infinite;
+        }
+
+        /* Soccer field line accents for sections */
+        .how-to-play::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .how-to-play {
+            position: relative;
+        }
     </style>
 </head>
 <body>
@@ -1328,6 +1466,67 @@
                     <div class="feature-icon">🎁</div>
                     <h3 class="feature-title">Perfect Gift</h3>
                     <p class="feature-desc">Premium packaging, ready to gift</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Explore</span>
+                <h2 class="section-title">8 CATEGORIES OF <span class="highlight-gold">SOCCER KNOWLEDGE</span></h2>
+                <p class="section-subtitle">From international legends to tactical managers — test every dimension of the beautiful game.</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card-item cat-international">
+                    <div class="category-icon-box">
+                        <img src="assets/categories/international.svg" alt="International soccer trivia" loading="lazy">
+                    </div>
+                    <span class="category-card-label">INTERNATIONAL</span>
+                </div>
+                <div class="category-card-item cat-players">
+                    <div class="category-icon-box">
+                        <img src="assets/categories/players.svg" alt="Players trivia" loading="lazy">
+                    </div>
+                    <span class="category-card-label">PLAYERS</span>
+                </div>
+                <div class="category-card-item cat-challenge">
+                    <div class="category-icon-box">
+                        <img src="assets/categories/challenge.svg" alt="Challenge trivia" loading="lazy">
+                    </div>
+                    <span class="category-card-label">CHALLENGE</span>
+                </div>
+                <div class="category-card-item cat-geography">
+                    <div class="category-icon-box">
+                        <img src="assets/categories/geography.svg" alt="Geography trivia" loading="lazy">
+                    </div>
+                    <span class="category-card-label">GEOGRAPHY</span>
+                </div>
+                <div class="category-card-item cat-clubs">
+                    <div class="category-icon-box">
+                        <img src="assets/categories/clubs.svg" alt="Clubs trivia" loading="lazy">
+                    </div>
+                    <span class="category-card-label">CLUBS</span>
+                </div>
+                <div class="category-card-item cat-managers">
+                    <div class="category-icon-box">
+                        <img src="assets/categories/managers.svg" alt="Managers trivia" loading="lazy">
+                    </div>
+                    <span class="category-card-label">MANAGERS</span>
+                </div>
+                <div class="category-card-item cat-guessthe">
+                    <div class="category-icon-box">
+                        <img src="assets/categories/guessthe.svg" alt="Guess The trivia" loading="lazy">
+                    </div>
+                    <span class="category-card-label">GUESS THE</span>
+                </div>
+                <div class="category-card-item cat-random">
+                    <div class="category-icon-box">
+                        <img src="assets/categories/random.svg" alt="Random trivia" loading="lazy">
+                    </div>
+                    <span class="category-card-label">RANDOM</span>
                 </div>
             </div>
         </div>
