@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Ultimate Soccer Trivia</title>
+    <meta name="description" content="Privacy Policy for Ultimate Soccer Trivia Card Game and Digital Trivia Platform by Ultimate Soccer FC LLC.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://ultimatesoccertrivia.com/privacy.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #00C853;
+            --primary-green-dark: #00A844;
+            --primary-green-glow: rgba(0, 200, 83, 0.4);
+            --accent-gold: #FFD700;
+            --dark-bg: #121212;
+            --dark-card: #1A1A1A;
+            --text-white: #FFFFFF;
+            --text-gray: #9CA3AF;
+            --text-light-gray: #E5E7EB;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--dark-bg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            color: var(--text-white);
+            line-height: 1.8;
+        }
+
+        a { color: var(--primary-green); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(18, 18, 18, 0.95); backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .nav-container {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 12px 20px; max-width: 1100px; margin: 0 auto;
+        }
+        .nav-logo img { height: 56px; border-radius: 8px; }
+        .nav-cta {
+            background: var(--primary-green); color: var(--dark-bg);
+            padding: 10px 20px; border-radius: 8px; font-weight: 700; font-size: 0.9rem;
+            transition: var(--transition); text-decoration: none;
+        }
+        .nav-cta:hover { background: var(--primary-green-dark); transform: translateY(-1px); text-decoration: none; }
+
+        .legal-content {
+            max-width: 800px; margin: 0 auto; padding: 120px 20px 80px;
+        }
+        .legal-content h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            letter-spacing: 1px; margin-bottom: 10px;
+        }
+        .legal-content .effective-date {
+            color: var(--accent-gold); font-size: 0.95rem; margin-bottom: 40px;
+            padding-bottom: 20px; border-bottom: 1px solid var(--border-subtle);
+        }
+        .legal-content h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem; letter-spacing: 1px;
+            color: var(--primary-green); margin-top: 40px; margin-bottom: 15px;
+            padding-top: 20px; border-top: 1px solid var(--border-subtle);
+        }
+        .legal-content h2:first-of-type { border-top: none; padding-top: 0; }
+        .legal-content h3 {
+            font-size: 1.1rem; margin-top: 25px; margin-bottom: 10px; color: var(--accent-gold);
+        }
+        .legal-content p { color: var(--text-light-gray); margin-bottom: 15px; }
+        .legal-content ul, .legal-content ol {
+            color: var(--text-light-gray); margin-bottom: 15px; padding-left: 25px;
+        }
+        .legal-content li { margin-bottom: 8px; }
+        .legal-content strong { color: var(--text-white); }
+
+        .toc {
+            background: var(--dark-card); border-radius: 12px; padding: 25px 30px;
+            margin-bottom: 40px; border: 1px solid var(--border-subtle);
+        }
+        .toc h3 { color: var(--text-white); margin-top: 0; margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .toc ol { padding-left: 20px; }
+        .toc li { margin-bottom: 6px; }
+        .toc a { color: var(--primary-green); font-size: 0.9rem; }
+
+        .data-table {
+            width: 100%; border-collapse: collapse; margin: 15px 0 25px;
+            background: var(--dark-card); border-radius: 8px; overflow: hidden;
+        }
+        .data-table th {
+            background: rgba(0, 200, 83, 0.15); color: var(--primary-green);
+            padding: 12px 16px; text-align: left; font-size: 0.85rem;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .data-table td {
+            padding: 12px 16px; border-bottom: 1px solid var(--border-subtle);
+            color: var(--text-light-gray); font-size: 0.9rem;
+        }
+        .data-table tr:last-child td { border-bottom: none; }
+
+        .highlight-box {
+            background: rgba(255, 215, 0, 0.08); border: 1px solid rgba(255, 215, 0, 0.25);
+            border-radius: 10px; padding: 20px 25px; margin: 20px 0;
+        }
+        .highlight-box p { color: var(--text-light-gray); margin-bottom: 8px; }
+        .highlight-box p:last-child { margin-bottom: 0; }
+
+        .footer {
+            background: var(--dark-card); padding: 30px 0;
+            border-top: 1px solid var(--border-subtle); text-align: center;
+        }
+        .footer p { color: var(--text-gray); font-size: 0.85rem; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .footer a { color: var(--primary-green); }
+
+        @media (max-width: 768px) {
+            .nav-logo img { height: 44px; }
+            .legal-content { padding: 100px 16px 60px; }
+            .data-table { font-size: 0.8rem; }
+            .data-table th, .data-table td { padding: 10px 12px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><img src="assets/logo.png" alt="Ultimate Soccer FC Logo"></a>
+            <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="nav-cta">Buy on Amazon →</a>
+        </div>
+    </nav>
+
+    <main class="legal-content">
+        <h1>PRIVACY <span style="color: var(--primary-green);">POLICY</span></h1>
+        <p class="effective-date">Effective Date: March 1, 2026 &nbsp;|&nbsp; Last Updated: March 1, 2026</p>
+
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ol>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#info-collect">Information We Collect</a></li>
+                <li><a href="#how-use">How We Use Your Information</a></li>
+                <li><a href="#sharing">Information Sharing &amp; Disclosure</a></li>
+                <li><a href="#cookies">Cookies &amp; Tracking Technologies</a></li>
+                <li><a href="#data-retention">Data Retention</a></li>
+                <li><a href="#data-security">Data Security</a></li>
+                <li><a href="#children">Children's Privacy (COPPA Compliance)</a></li>
+                <li><a href="#california">California Privacy Rights (CCPA/CPRA)</a></li>
+                <li><a href="#state-privacy">Other State Privacy Laws</a></li>
+                <li><a href="#your-rights">Your Rights &amp; Choices</a></li>
+                <li><a href="#third-party">Third-Party Services</a></li>
+                <li><a href="#international">International Users</a></li>
+                <li><a href="#changes">Changes to This Policy</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ol>
+        </div>
+
+        <h2 id="overview">1. Overview</h2>
+        <p><strong>Ultimate Soccer FC LLC</strong> ("Company," "we," "us," or "our") respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you:</p>
+        <ul>
+            <li>Visit our website at <strong>ultimatesoccertrivia.com</strong> ("Website")</li>
+            <li>Create an account and use the digital trivia platform at <strong>play.ultimatesoccertrivia.com</strong> ("Digital Platform")</li>
+            <li>Redeem a QR Premium Card included with your Ultimate Soccer Trivia Card Game</li>
+            <li>Contact us via email or other channels</li>
+        </ul>
+        <p>Please read this Privacy Policy carefully. By using our Services, you consent to the practices described herein. If you do not agree, please do not use our Services.</p>
+
+        <h2 id="info-collect">2. Information We Collect</h2>
+
+        <h3>2.1 Information You Provide Directly</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Data Type</th>
+                    <th>When Collected</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Email address</strong></td>
+                    <td>Account creation</td>
+                    <td>Account identification, communication, password recovery</td>
+                </tr>
+                <tr>
+                    <td><strong>Username</strong></td>
+                    <td>Account creation</td>
+                    <td>Display name on the Digital Platform</td>
+                </tr>
+                <tr>
+                    <td><strong>Age confirmation</strong></td>
+                    <td>Account creation</td>
+                    <td>COPPA compliance (we store only that you confirmed 13+, not your actual age or birthdate)</td>
+                </tr>
+                <tr>
+                    <td><strong>QR redemption code</strong></td>
+                    <td>Account creation</td>
+                    <td>Linking your physical purchase to your digital account</td>
+                </tr>
+                <tr>
+                    <td><strong>Support correspondence</strong></td>
+                    <td>When you contact us</td>
+                    <td>Responding to your inquiries</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2.2 Information Collected Automatically</h3>
+        <p>When you access the Website or Digital Platform, we may automatically collect certain technical information:</p>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Data Type</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>IP address</strong></td>
+                    <td>Security, fraud prevention, general analytics</td>
+                </tr>
+                <tr>
+                    <td><strong>Browser type &amp; version</strong></td>
+                    <td>Ensuring compatibility, troubleshooting</td>
+                </tr>
+                <tr>
+                    <td><strong>Device type</strong></td>
+                    <td>Optimizing user experience</td>
+                </tr>
+                <tr>
+                    <td><strong>Pages visited &amp; time spent</strong></td>
+                    <td>Understanding usage patterns, improving the Service</td>
+                </tr>
+                <tr>
+                    <td><strong>Referring URL</strong></td>
+                    <td>Understanding how users find us</td>
+                </tr>
+                <tr>
+                    <td><strong>Game activity data</strong></td>
+                    <td>Scores, progress, trivia performance (tied to Account)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2.3 Information We Do NOT Collect</h3>
+        <div class="highlight-box">
+            <p>✅ We do <strong>not</strong> collect payment or financial information (all purchases are processed through Amazon or other retailers)</p>
+            <p>✅ We do <strong>not</strong> collect precise geolocation data</p>
+            <p>✅ We do <strong>not</strong> collect real names (unless voluntarily provided in support emails)</p>
+            <p>✅ We do <strong>not</strong> collect social security numbers or government IDs</p>
+            <p>✅ We do <strong>not</strong> knowingly collect any information from children under 13</p>
+        </div>
+
+        <h2 id="how-use">3. How We Use Your Information</h2>
+        <p>We use the information we collect for the following purposes:</p>
+        <ul>
+            <li><strong>Account management:</strong> Creating and maintaining your Account, authenticating your identity, linking your QR code to your profile</li>
+            <li><strong>Service delivery:</strong> Providing access to the Digital Platform, tracking game progress and scores</li>
+            <li><strong>Communication:</strong> Sending account-related notifications (e.g., password resets, Terms updates). We will not send marketing emails unless you explicitly opt in.</li>
+            <li><strong>Improvement:</strong> Analyzing usage data to improve the Digital Platform, fix bugs, and develop new features</li>
+            <li><strong>Security:</strong> Detecting and preventing fraud, abuse, and unauthorized access</li>
+            <li><strong>Legal compliance:</strong> Complying with applicable laws, regulations, and legal processes</li>
+        </ul>
+
+        <h2 id="sharing">4. Information Sharing &amp; Disclosure</h2>
+        <p><strong>We do not sell, rent, or trade your personal information to third parties.</strong></p>
+        <p>We may share your information only in the following limited circumstances:</p>
+
+        <h3>4.1 Service Providers</h3>
+        <p>We may share information with trusted third-party service providers who assist us in operating the Digital Platform (e.g., web hosting providers, analytics services, email delivery services). These providers are contractually obligated to use your data only for the purposes we specify and to maintain appropriate security measures.</p>
+
+        <h3>4.2 Legal Requirements</h3>
+        <p>We may disclose your information if required by law, regulation, legal process, or governmental request, or if we believe disclosure is necessary to protect our rights, your safety, or the safety of others.</p>
+
+        <h3>4.3 Business Transfers</h3>
+        <p>In the event of a merger, acquisition, reorganization, or sale of all or a portion of our assets, your information may be transferred as part of the transaction. We will notify you via email and/or prominent notice on the Website of any change in ownership or use of your information.</p>
+
+        <h3>4.4 With Your Consent</h3>
+        <p>We may share your information for other purposes with your explicit consent.</p>
+
+        <h2 id="cookies">5. Cookies &amp; Tracking Technologies</h2>
+        <h3>5.1 What We Use</h3>
+        <p>We may use the following technologies on the Website and Digital Platform:</p>
+        <ul>
+            <li><strong>Essential cookies:</strong> Required for the Digital Platform to function (e.g., session authentication, remembering login state). These cannot be disabled.</li>
+            <li><strong>Analytics cookies:</strong> Help us understand how visitors use the Website and Digital Platform (e.g., Google Analytics or similar). These collect aggregated, anonymized data.</li>
+        </ul>
+
+        <h3>5.2 What We Do NOT Use</h3>
+        <ul>
+            <li>We do <strong>not</strong> use advertising or retargeting cookies</li>
+            <li>We do <strong>not</strong> use third-party tracking pixels for ad networks</li>
+            <li>We do <strong>not</strong> sell data collected through cookies</li>
+        </ul>
+
+        <h3>5.3 Managing Cookies</h3>
+        <p>You can control cookies through your browser settings. Most browsers allow you to refuse cookies or alert you when cookies are being sent. Note that disabling essential cookies may prevent you from using the Digital Platform.</p>
+
+        <h2 id="data-retention">6. Data Retention</h2>
+        <p>We retain your personal information for as long as your Account is active or as needed to provide the Services. Specifically:</p>
+        <ul>
+            <li><strong>Account data</strong> (email, username): Retained until you request account deletion or we discontinue the Digital Platform</li>
+            <li><strong>Game activity data:</strong> Retained as long as your Account is active</li>
+            <li><strong>Analytics data:</strong> Retained in aggregated, anonymized form indefinitely</li>
+            <li><strong>Support correspondence:</strong> Retained for up to 2 years after resolution</li>
+        </ul>
+        <p>Upon account deletion, we will delete or anonymize your personal information within <strong>30 days</strong>, except where retention is required by law.</p>
+
+        <h2 id="data-security">7. Data Security</h2>
+        <p>We implement commercially reasonable technical and organizational security measures to protect your personal information, including:</p>
+        <ul>
+            <li>Encrypted data transmission (HTTPS/TLS)</li>
+            <li>Secure password hashing</li>
+            <li>Access controls limiting who can view personal data</li>
+            <li>Regular security reviews</li>
+        </ul>
+        <p>However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security. You are responsible for maintaining the security of your Account credentials.</p>
+
+        <h2 id="children">8. Children's Privacy (COPPA Compliance)</h2>
+        <div class="highlight-box">
+            <p>⚠️ <strong>This section is critically important.</strong> We take children's privacy seriously and comply with the Children's Online Privacy Protection Act (COPPA).</p>
+        </div>
+
+        <h3>8.1 Age Restriction</h3>
+        <p>The Digital Platform requires users to be <strong>at least 13 years of age</strong> to create an Account. We implement an age-screening mechanism during account registration. Users who indicate they are under 13 are blocked from creating an Account.</p>
+
+        <h3>8.2 No Collection from Children Under 13</h3>
+        <p><strong>We do not knowingly collect, use, or disclose personal information from children under the age of 13.</strong> We do not direct our Digital Platform to children under 13, and the Digital Platform is classified as a "general audience" service with an age gate.</p>
+
+        <h3>8.3 Physical Product — No Data Collection</h3>
+        <p>The physical card game does not collect any data whatsoever. It is suitable for players of all ages. Only the Digital Platform (which requires account creation) is subject to the age requirement.</p>
+
+        <h3>8.4 If We Discover a Child's Data</h3>
+        <p>If we learn that we have inadvertently collected personal information from a child under 13, we will:</p>
+        <ol>
+            <li>Immediately delete the Account and all associated personal data</li>
+            <li>Revoke access to the Digital Platform for that Account</li>
+            <li>Take reasonable steps to prevent future occurrences</li>
+        </ol>
+
+        <h3>8.5 Parental Notice</h3>
+        <p>If you are a parent or guardian and believe your child under 13 has created an Account or provided personal information to us, please contact us immediately at <a href="mailto:info@ultimatesoccerfc.com">info@ultimatesoccerfc.com</a>. We will take prompt action to delete the information.</p>
+
+        <h3>8.6 Users Ages 13–17</h3>
+        <p>Users between 13 and 17 may create an Account with parental or guardian consent. We encourage parents to monitor their children's online activities and to help enforce this Privacy Policy.</p>
+
+        <h2 id="california">9. California Privacy Rights (CCPA/CPRA)</h2>
+        <p>The California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), provides California residents with specific privacy rights. While Ultimate Soccer FC LLC is a small business that may not meet the CCPA's jurisdictional thresholds (annual revenue exceeding $25 million, data on 100,000+ consumers, or 50%+ revenue from selling data), <strong>we voluntarily extend the following rights to all California residents as a matter of good practice:</strong></p>
+
+        <h3>9.1 Your California Rights</h3>
+        <ul>
+            <li><strong>Right to Know:</strong> You may request information about what personal data we have collected about you, the sources, purposes, and third parties with whom we share it.</li>
+            <li><strong>Right to Delete:</strong> You may request that we delete your personal information, subject to certain legal exceptions.</li>
+            <li><strong>Right to Correct:</strong> You may request that we correct inaccurate personal information.</li>
+            <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights.</li>
+        </ul>
+
+        <h3>9.2 We Do Not Sell or Share Personal Information</h3>
+        <p><strong>We do not sell your personal information.</strong> We do not "share" your personal information for cross-context behavioral advertising as defined under the CPRA. Therefore, there is no need for a "Do Not Sell or Share My Personal Information" link, but we include this disclosure for transparency.</p>
+
+        <h3>9.3 How to Exercise Your Rights</h3>
+        <p>To exercise any of these rights, contact us at <a href="mailto:info@ultimatesoccerfc.com">info@ultimatesoccerfc.com</a> with the subject line "California Privacy Request." We will verify your identity and respond within 45 days.</p>
+
+        <h2 id="state-privacy">10. Other State Privacy Laws</h2>
+        <p>Several U.S. states have enacted comprehensive privacy legislation (including Virginia, Colorado, Connecticut, Utah, Texas, Oregon, Montana, and others). While many of these laws have thresholds that may not apply to our business, we are committed to respecting the privacy rights of all users. If you are a resident of any state with a consumer privacy law, you may contact us to exercise any applicable rights (access, deletion, correction, opt-out) by emailing <a href="mailto:info@ultimatesoccerfc.com">info@ultimatesoccerfc.com</a>.</p>
+
+        <h2 id="your-rights">11. Your Rights &amp; Choices</h2>
+        <p>Regardless of where you live, you have the following rights regarding your personal information:</p>
+
+        <h3>11.1 Access Your Data</h3>
+        <p>You may request a copy of the personal information we hold about you.</p>
+
+        <h3>11.2 Update Your Data</h3>
+        <p>You may update your email address or username through the Digital Platform's account settings, or by contacting us.</p>
+
+        <h3>11.3 Delete Your Account</h3>
+        <p>You may request deletion of your Account and all associated personal data by emailing <a href="mailto:info@ultimatesoccerfc.com">info@ultimatesoccerfc.com</a>. Deletion will be completed within 30 days. Note that once your Account is deleted, the associated QR code cannot be reused to create a new Account.</p>
+
+        <h3>11.4 Opt Out of Communications</h3>
+        <p>If you receive non-essential emails from us, you may opt out by clicking the "unsubscribe" link in the email or by contacting us. Note that you cannot opt out of essential Account-related communications (e.g., security alerts, Terms changes) while your Account is active.</p>
+
+        <h3>11.5 Response Time</h3>
+        <p>We will respond to all privacy requests within <strong>30 days</strong>. If we need additional time, we will notify you of the reason and extension period (not to exceed an additional 30 days).</p>
+
+        <h2 id="third-party">12. Third-Party Services</h2>
+        <p>Our Services may contain links to third-party websites (e.g., Amazon product page). This Privacy Policy does not apply to third-party websites or services. We encourage you to review the privacy policies of any third-party site you visit.</p>
+        <p>Specifically:</p>
+        <ul>
+            <li><strong>Amazon:</strong> Your purchase of the Physical Product through Amazon is governed by <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496" target="_blank" rel="noopener">Amazon's Privacy Notice</a>. We do not receive your payment information from Amazon.</li>
+            <li><strong>Hosting/Analytics Providers:</strong> We use third-party services for web hosting and analytics. These providers have their own privacy policies and may collect technical data as described in Section 2.2.</li>
+        </ul>
+
+        <h2 id="international">13. International Users</h2>
+        <p>The Services are operated in the <strong>United States</strong> and are intended for users located in the United States. If you access the Services from outside the United States, please be aware that your information may be transferred to, stored, and processed in the United States, where data protection laws may differ from those in your country. By using the Services, you consent to this transfer.</p>
+        <p>We do not specifically target users in the European Union, European Economic Area, or United Kingdom. If you are located in these regions, please be aware that we may not comply with all requirements of the GDPR. If you have concerns, please contact us before creating an Account.</p>
+
+        <h2 id="changes">14. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes, we will:</p>
+        <ul>
+            <li>Update the "Last Updated" date at the top of this page</li>
+            <li>Notify registered users via email</li>
+            <li>Post a prominent notice on the Website or Digital Platform</li>
+        </ul>
+        <p>We encourage you to review this Privacy Policy periodically. Your continued use of the Services after changes are posted constitutes your acceptance of the revised policy.</p>
+
+        <h2 id="contact">15. Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+        <p>
+            <strong>Ultimate Soccer FC LLC</strong><br>
+            Email: <a href="mailto:info@ultimatesoccerfc.com">info@ultimatesoccerfc.com</a><br>
+            Website: <a href="https://ultimatesoccertrivia.com">ultimatesoccertrivia.com</a>
+        </p>
+        <p>For COPPA-related concerns (children's privacy), please use the subject line: <strong>"COPPA — Children's Privacy Concern"</strong></p>
+
+        <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border-subtle); text-align: center;">
+            <p><a href="/" style="color: var(--primary-green); font-weight: 600;">← Back to Ultimate Soccer Trivia</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/terms.html" style="color: var(--accent-gold); font-weight: 600;">Terms of Service →</a></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Ultimate Soccer FC LLC. All rights reserved. &nbsp;|&nbsp; <a href="/terms.html">Terms of Service</a> &nbsp;|&nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="mailto:info@ultimatesoccerfc.com">Contact Us</a></p>
+    </footer>
+</body>
+</html>

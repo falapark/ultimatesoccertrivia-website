@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Ultimate Soccer Trivia</title>
+    <meta name="description" content="Terms of Service for Ultimate Soccer Trivia Card Game and Digital Trivia Platform by Ultimate Soccer FC LLC.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://ultimatesoccertrivia.com/terms.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #00C853;
+            --primary-green-dark: #00A844;
+            --primary-green-glow: rgba(0, 200, 83, 0.4);
+            --accent-gold: #FFD700;
+            --dark-bg: #121212;
+            --dark-card: #1A1A1A;
+            --text-white: #FFFFFF;
+            --text-gray: #9CA3AF;
+            --text-light-gray: #E5E7EB;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--dark-bg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            color: var(--text-white);
+            line-height: 1.8;
+        }
+
+        a { color: var(--primary-green); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Nav */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(18, 18, 18, 0.95); backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .nav-container {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 12px 20px; max-width: 1100px; margin: 0 auto;
+        }
+        .nav-logo img { height: 56px; border-radius: 8px; }
+        .nav-cta {
+            background: var(--primary-green); color: var(--dark-bg);
+            padding: 10px 20px; border-radius: 8px; font-weight: 700; font-size: 0.9rem;
+            transition: var(--transition); text-decoration: none;
+        }
+        .nav-cta:hover { background: var(--primary-green-dark); transform: translateY(-1px); text-decoration: none; }
+
+        /* Content */
+        .legal-content {
+            max-width: 800px; margin: 0 auto; padding: 120px 20px 80px;
+        }
+        .legal-content h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            letter-spacing: 1px; margin-bottom: 10px;
+        }
+        .legal-content .effective-date {
+            color: var(--accent-gold); font-size: 0.95rem; margin-bottom: 40px;
+            padding-bottom: 20px; border-bottom: 1px solid var(--border-subtle);
+        }
+        .legal-content h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem; letter-spacing: 1px;
+            color: var(--primary-green); margin-top: 40px; margin-bottom: 15px;
+            padding-top: 20px; border-top: 1px solid var(--border-subtle);
+        }
+        .legal-content h2:first-of-type { border-top: none; padding-top: 0; }
+        .legal-content h3 {
+            font-size: 1.1rem; margin-top: 25px; margin-bottom: 10px; color: var(--accent-gold);
+        }
+        .legal-content p { color: var(--text-light-gray); margin-bottom: 15px; }
+        .legal-content ul, .legal-content ol {
+            color: var(--text-light-gray); margin-bottom: 15px; padding-left: 25px;
+        }
+        .legal-content li { margin-bottom: 8px; }
+        .legal-content strong { color: var(--text-white); }
+
+        .toc {
+            background: var(--dark-card); border-radius: 12px; padding: 25px 30px;
+            margin-bottom: 40px; border: 1px solid var(--border-subtle);
+        }
+        .toc h3 { color: var(--text-white); margin-top: 0; margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .toc ol { padding-left: 20px; }
+        .toc li { margin-bottom: 6px; }
+        .toc a { color: var(--primary-green); font-size: 0.9rem; }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-card); padding: 30px 0;
+            border-top: 1px solid var(--border-subtle); text-align: center;
+        }
+        .footer p { color: var(--text-gray); font-size: 0.85rem; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .footer a { color: var(--primary-green); }
+
+        @media (max-width: 768px) {
+            .nav-logo img { height: 44px; }
+            .legal-content { padding: 100px 16px 60px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><img src="assets/logo.png" alt="Ultimate Soccer FC Logo"></a>
+            <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="nav-cta">Buy on Amazon →</a>
+        </div>
+    </nav>
+
+    <main class="legal-content">
+        <h1>TERMS OF <span style="color: var(--primary-green);">SERVICE</span></h1>
+        <p class="effective-date">Effective Date: March 1, 2026 &nbsp;|&nbsp; Last Updated: March 1, 2026</p>
+
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ol>
+                <li><a href="#acceptance">Acceptance of Terms</a></li>
+                <li><a href="#definitions">Definitions</a></li>
+                <li><a href="#eligibility">Eligibility &amp; Age Requirements</a></li>
+                <li><a href="#product">Product Description &amp; Digital Access</a></li>
+                <li><a href="#qr-code">QR Code Redemption &amp; Account Creation</a></li>
+                <li><a href="#digital-game">Digital Game Service</a></li>
+                <li><a href="#user-conduct">User Conduct</a></li>
+                <li><a href="#ip">Intellectual Property</a></li>
+                <li><a href="#purchases">Purchases, Returns &amp; Refunds</a></li>
+                <li><a href="#availability">Service Availability &amp; Modifications</a></li>
+                <li><a href="#termination">Account Termination</a></li>
+                <li><a href="#disclaimers">Disclaimers &amp; Limitation of Liability</a></li>
+                <li><a href="#indemnification">Indemnification</a></li>
+                <li><a href="#governing-law">Governing Law &amp; Dispute Resolution</a></li>
+                <li><a href="#changes">Changes to These Terms</a></li>
+                <li><a href="#contact">Contact Information</a></li>
+            </ol>
+        </div>
+
+        <h2 id="acceptance">1. Acceptance of Terms</h2>
+        <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and <strong>Ultimate Soccer FC LLC</strong> ("Company," "we," "us," or "our"), a limited liability company organized under the laws of the United States.</p>
+        <p>By purchasing the Ultimate Soccer Trivia Card Game ("Physical Product"), scanning the QR Premium Card, creating an account on <strong>play.ultimatesoccertrivia.com</strong> ("Digital Platform"), or otherwise accessing or using our website at <strong>ultimatesoccertrivia.com</strong> ("Website") or any related services (collectively, the "Services"), you agree to be bound by these Terms and our <a href="/privacy.html">Privacy Policy</a>.</p>
+        <p><strong>If you do not agree to these Terms, do not use the Services or create an account on the Digital Platform.</strong></p>
+
+        <h2 id="definitions">2. Definitions</h2>
+        <ul>
+            <li><strong>"Physical Product"</strong> — The Ultimate Soccer Trivia Card Game, a physical card game sold through Amazon and other authorized retailers.</li>
+            <li><strong>"QR Premium Card"</strong> — A unique card included in each Physical Product box containing a one-time-use QR code that grants access to the Digital Platform.</li>
+            <li><strong>"Digital Platform"</strong> — The online trivia game accessible at play.ultimatesoccertrivia.com.</li>
+            <li><strong>"Account"</strong> — A user account created on the Digital Platform using a valid QR Premium Card code.</li>
+            <li><strong>"Content"</strong> — All trivia questions, answers, graphics, text, software, and other materials available through the Services.</li>
+        </ul>
+
+        <h2 id="eligibility">3. Eligibility &amp; Age Requirements</h2>
+        <h3>3.1 Physical Product</h3>
+        <p>The Physical Product is designed for soccer fans of all ages. No age restriction applies to purchasing or playing the physical card game. Parental supervision is recommended for younger children.</p>
+
+        <h3>3.2 Digital Platform — Age Requirement</h3>
+        <p><strong>You must be at least 13 years of age to create an Account on the Digital Platform.</strong> During account registration, you will be asked to confirm your age. If you are under 13, you will not be permitted to create an Account or use the Digital Platform.</p>
+        <p>This age requirement exists to comply with the Children's Online Privacy Protection Act ("COPPA"). We do not knowingly collect personal information from children under the age of 13. If we discover that an Account has been created by or on behalf of a child under 13, we will promptly delete the Account and all associated data.</p>
+
+        <h3>3.3 Minors (Ages 13–17)</h3>
+        <p>If you are between 13 and 17 years of age, you represent that your parent or legal guardian has reviewed and agreed to these Terms on your behalf. Your parent or guardian is responsible for your use of the Services and any consequences thereof.</p>
+
+        <h2 id="product">4. Product Description &amp; Digital Access</h2>
+        <h3>4.1 What You're Purchasing</h3>
+        <p>When you purchase the Ultimate Soccer Trivia Card Game, you are purchasing a <strong>physical card game product</strong>. Each box includes a QR Premium Card that provides complimentary access to the Digital Platform as a <strong>bundled bonus feature</strong>.</p>
+
+        <h3>4.2 Digital Access Is a Bonus</h3>
+        <p>The Digital Platform access is provided as a <strong>free supplementary benefit</strong> included with the Physical Product. It is not a separately purchased service, subscription, or digital product. The primary product is the physical card game. The retail price of $29.99 (or then-current price) reflects the value of the Physical Product; no additional charge is made for digital access.</p>
+
+        <h3>4.3 No Subscription Required</h3>
+        <p>Access to the Digital Platform does not require any recurring payment or subscription. Once you redeem your QR Premium Card and create an Account, you may access the Digital Platform at no additional cost, subject to these Terms and the availability provisions in Section 10.</p>
+
+        <h2 id="qr-code">5. QR Code Redemption &amp; Account Creation</h2>
+        <h3>5.1 One Code, One Account</h3>
+        <p>Each QR Premium Card contains a unique, one-time-use redemption code. Each code may only be redeemed <strong>once</strong> and is linked to <strong>one Account</strong>. Once a code has been redeemed, it cannot be used again, transferred to another person, or applied to a different Account.</p>
+
+        <h3>5.2 Account Information</h3>
+        <p>To create an Account, you must provide:</p>
+        <ul>
+            <li>A valid email address</li>
+            <li>A username</li>
+            <li>Age confirmation (13 or older)</li>
+        </ul>
+        <p>You are responsible for maintaining the confidentiality of your Account credentials and for all activity that occurs under your Account.</p>
+
+        <h3>5.3 Non-Transferability</h3>
+        <p>Accounts are personal and non-transferable. You may not sell, trade, gift, or otherwise transfer your Account or QR code to another person. Any attempt to do so may result in Account termination.</p>
+
+        <h3>5.4 Code Security</h3>
+        <p>You are solely responsible for safeguarding your QR Premium Card and redemption code. We are not responsible for unauthorized use of your code if it is lost, shared, or stolen. We will not issue replacement codes for codes that have already been redeemed.</p>
+
+        <h2 id="digital-game">6. Digital Game Service</h2>
+        <h3>6.1 License to Use</h3>
+        <p>Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to access and use the Digital Platform for your personal, non-commercial entertainment purposes.</p>
+
+        <h3>6.2 No Ownership</h3>
+        <p>You do not own any part of the Digital Platform. Your redemption of a QR code grants you a <strong>license to access</strong> the Digital Platform, not ownership of any digital content, software, or intellectual property.</p>
+
+        <h3>6.3 Updates and Changes</h3>
+        <p>We may update, modify, or change the Digital Platform's features, content, trivia questions, interface, or functionality at any time without prior notice. We may add new features or remove existing ones at our discretion.</p>
+
+        <h2 id="user-conduct">7. User Conduct</h2>
+        <p>When using the Services, you agree <strong>not</strong> to:</p>
+        <ul>
+            <li>Attempt to bypass, hack, or circumvent the QR code redemption system</li>
+            <li>Create multiple Accounts using the same or fraudulent codes</li>
+            <li>Use automated tools, bots, or scripts to access the Digital Platform</li>
+            <li>Reverse engineer, decompile, or disassemble any part of the Digital Platform</li>
+            <li>Share, publish, or distribute trivia answers, game content, or proprietary information</li>
+            <li>Use the Services for any unlawful purpose or in violation of any applicable law</li>
+            <li>Interfere with or disrupt the integrity or performance of the Services</li>
+            <li>Impersonate another person or entity</li>
+            <li>Attempt to gain unauthorized access to other users' Accounts</li>
+        </ul>
+
+        <h2 id="ip">8. Intellectual Property</h2>
+        <p>All Content, trademarks, logos, trade dress, game design, trivia questions, software, and other materials associated with the Services are the exclusive property of Ultimate Soccer FC LLC or its licensors, and are protected by U.S. and international copyright, trademark, and other intellectual property laws.</p>
+        <p>"Ultimate Soccer Trivia," "Ultimate Soccer FC," and associated logos and branding are trademarks of Ultimate Soccer FC LLC. You may not use our trademarks without prior written permission.</p>
+        <p>Nothing in these Terms grants you any right, title, or interest in our intellectual property except the limited license described in Section 6.1.</p>
+
+        <h2 id="purchases">9. Purchases, Returns &amp; Refunds</h2>
+        <h3>9.1 Physical Product Purchases</h3>
+        <p>The Physical Product is sold exclusively through Amazon and other authorized retailers. All purchases are subject to the respective retailer's terms of sale, return policies, and customer service procedures. For purchases made through Amazon, Amazon's return and refund policies apply.</p>
+
+        <h3>9.2 Redeemed QR Codes</h3>
+        <p><strong>Once a QR Premium Card code has been redeemed and an Account has been created, the digital access component is considered fully delivered and is non-refundable.</strong> If you return the Physical Product to a retailer after redeeming the QR code, the digital access will not be automatically revoked, but we reserve the right to deactivate the associated Account.</p>
+
+        <h3>9.3 Defective or Missing QR Cards</h3>
+        <p>If your Physical Product was missing a QR Premium Card or the card was damaged/unreadable, please contact us at <a href="mailto:info@ultimatesoccerfc.com">info@ultimatesoccerfc.com</a> with your Amazon order number and a photo of the product. We will verify your purchase and provide a replacement code at our discretion.</p>
+
+        <h3>9.4 No Monetary Value</h3>
+        <p>QR Premium Cards and digital access have no independent monetary value and cannot be exchanged for cash, credit, or any other consideration.</p>
+
+        <h2 id="availability">10. Service Availability &amp; Modifications</h2>
+        <h3>10.1 No Guaranteed Uptime</h3>
+        <p>The Digital Platform is provided on an "as available" basis. We do not guarantee uninterrupted, error-free, or continuous access to the Digital Platform. The Services may be temporarily unavailable due to maintenance, updates, server issues, or circumstances beyond our control.</p>
+
+        <h3>10.2 Right to Modify or Discontinue</h3>
+        <p><strong>We reserve the right to modify, suspend, or permanently discontinue the Digital Platform (or any part thereof) at any time, with or without notice.</strong> While we will make commercially reasonable efforts to provide advance notice of any permanent discontinuation, we are under no obligation to maintain the Digital Platform for any specific duration.</p>
+
+        <h3>10.3 Acknowledgment of Digital Nature</h3>
+        <p>You acknowledge and agree that:</p>
+        <ul>
+            <li>The Digital Platform is a supplementary bonus to the Physical Product</li>
+            <li>Digital services inherently depend on technology infrastructure, internet connectivity, and ongoing maintenance</li>
+            <li>The discontinuation of the Digital Platform does not entitle you to a refund of the Physical Product purchase price</li>
+            <li>The value of your purchase is primarily in the Physical Product itself</li>
+        </ul>
+
+        <h2 id="termination">11. Account Termination</h2>
+        <h3>11.1 By You</h3>
+        <p>You may delete your Account at any time by contacting us at <a href="mailto:info@ultimatesoccerfc.com">info@ultimatesoccerfc.com</a>. Upon deletion, your Account data will be removed in accordance with our <a href="/privacy.html">Privacy Policy</a>.</p>
+
+        <h3>11.2 By Us</h3>
+        <p>We may suspend or terminate your Account at any time, with or without cause, if we reasonably believe you have violated these Terms, engaged in fraudulent activity, or for any other reason at our sole discretion. We will endeavor to provide notice when feasible.</p>
+
+        <h3>11.3 Effect of Termination</h3>
+        <p>Upon termination, your right to access the Digital Platform ceases immediately. Termination does not entitle you to a refund. Sections 8, 12, 13, and 14 survive termination.</p>
+
+        <h2 id="disclaimers">12. Disclaimers &amp; Limitation of Liability</h2>
+        <h3>12.1 Disclaimer of Warranties</h3>
+        <p><strong>THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</strong></p>
+        <p>We do not warrant that the Digital Platform will be uninterrupted, secure, error-free, or free of viruses or other harmful components.</p>
+
+        <h3>12.2 Limitation of Liability</h3>
+        <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, ULTIMATE SOCCER FC LLC, ITS OFFICERS, DIRECTORS, MEMBERS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR BUSINESS INTERRUPTION, ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE THE SERVICES, REGARDLESS OF THE THEORY OF LIABILITY.</strong></p>
+        <p><strong>OUR TOTAL AGGREGATE LIABILITY TO YOU FOR ALL CLAIMS ARISING OUT OF OR RELATED TO THESE TERMS OR THE SERVICES SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE PHYSICAL PRODUCT (CURRENTLY $29.99 USD).</strong></p>
+
+        <h3>12.3 Basis of the Bargain</h3>
+        <p>You acknowledge that the limitations of liability in this section reflect a reasonable allocation of risk and are a fundamental part of the basis of the bargain between you and us.</p>
+
+        <h2 id="indemnification">13. Indemnification</h2>
+        <p>You agree to indemnify, defend, and hold harmless Ultimate Soccer FC LLC, its officers, directors, members, employees, and agents from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or in connection with: (a) your use of the Services; (b) your violation of these Terms; (c) your violation of any applicable law; or (d) your violation of any third party's rights.</p>
+
+        <h2 id="governing-law">14. Governing Law &amp; Dispute Resolution</h2>
+        <h3>14.1 Governing Law</h3>
+        <p>These Terms shall be governed by and construed in accordance with the laws of the United States and the state in which Ultimate Soccer FC LLC is organized, without regard to conflict of law principles.</p>
+
+        <h3>14.2 Informal Resolution</h3>
+        <p>Before initiating any formal dispute resolution, you agree to first contact us at <a href="mailto:info@ultimatesoccerfc.com">info@ultimatesoccerfc.com</a> and attempt to resolve any dispute informally for at least thirty (30) days.</p>
+
+        <h3>14.3 Arbitration</h3>
+        <p>If the dispute cannot be resolved informally, you and Ultimate Soccer FC LLC agree that any dispute, claim, or controversy arising out of or relating to these Terms or the Services shall be resolved through binding arbitration administered by the American Arbitration Association ("AAA") under its Consumer Arbitration Rules, rather than in court. Arbitration shall take place in the state where Ultimate Soccer FC LLC is organized, or remotely via telephone or video conference.</p>
+
+        <h3>14.4 Class Action Waiver</h3>
+        <p><strong>YOU AND ULTIMATE SOCCER FC LLC AGREE THAT EACH PARTY MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, CONSOLIDATED, OR REPRESENTATIVE ACTION.</strong></p>
+
+        <h3>14.5 Small Claims Court</h3>
+        <p>Notwithstanding the above, either party may bring an individual action in small claims court for disputes within the court's jurisdictional limits.</p>
+
+        <h2 id="changes">15. Changes to These Terms</h2>
+        <p>We may update these Terms from time to time. When we make material changes, we will:</p>
+        <ul>
+            <li>Update the "Last Updated" date at the top of this page</li>
+            <li>Notify registered users via the email address associated with their Account</li>
+            <li>Post a notice on the Website or Digital Platform</li>
+        </ul>
+        <p>Your continued use of the Services after the effective date of any changes constitutes your acceptance of the updated Terms. If you do not agree to the changes, you must stop using the Services and may request Account deletion.</p>
+
+        <h2 id="contact">16. Contact Information</h2>
+        <p>If you have questions about these Terms of Service, please contact us:</p>
+        <p>
+            <strong>Ultimate Soccer FC LLC</strong><br>
+            Email: <a href="mailto:info@ultimatesoccerfc.com">info@ultimatesoccerfc.com</a><br>
+            Website: <a href="https://ultimatesoccertrivia.com">ultimatesoccertrivia.com</a>
+        </p>
+
+        <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border-subtle); text-align: center;">
+            <p><a href="/" style="color: var(--primary-green); font-weight: 600;">← Back to Ultimate Soccer Trivia</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/privacy.html" style="color: var(--accent-gold); font-weight: 600;">Privacy Policy →</a></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Ultimate Soccer FC LLC. All rights reserved. &nbsp;|&nbsp; <a href="/terms.html">Terms of Service</a> &nbsp;|&nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="mailto:info@ultimatesoccerfc.com">Contact Us</a></p>
+    </footer>
+</body>
+</html>
