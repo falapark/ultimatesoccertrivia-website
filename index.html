@@ -207,37 +207,55 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 20px;
+            padding: 10px 16px;
             max-width: 1100px;
             margin: 0 auto;
+            gap: 8px;
         }
 
         .nav-logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            flex-shrink: 0;
         }
 
         .nav-logo-img {
-            height: 56px;
+            height: 44px;
             width: auto;
             border-radius: 8px;
         }
 
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         @media (max-width: 768px) {
             .nav-logo-img {
-                height: 52px;
+                height: 36px;
+            }
+            .nav-container {
+                padding: 8px 12px;
             }
         }
 
         .nav-cta {
             background: var(--primary-green);
             color: var(--dark-bg);
-            padding: 10px 20px;
+            padding: 8px 14px;
             border-radius: 8px;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.82rem;
             transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .nav-cta {
+                padding: 7px 10px;
+                font-size: 0.75rem;
+            }
         }
 
         .nav-cta:hover {
@@ -1333,8 +1351,10 @@
             <a href="#" class="nav-logo">
                 <img src="assets/logo.png" alt="Ultimate Soccer FC Logo" class="nav-logo-img">
             </a>
-            <a href="https://play.ultimatesoccertrivia.com" target="_blank" class="nav-cta" style="margin-right: 10px; background: transparent; border: 2px solid #00C853; color: #00C853;">🎮 Play Online</a>
-            <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="nav-cta">Buy on Amazon →</a>
+            <div class="nav-buttons">
+                <a href="https://play.ultimatesoccertrivia.com" target="_blank" class="nav-cta" style="background: transparent; border: 2px solid #00C853; color: #00C853;">🎮 Play Online</a>
+                <a href="https://www.amazon.com/dp/B0DNTJSJW1" target="_blank" class="nav-cta">Buy on Amazon →</a>
+            </div>
         </div>
     </nav>
 
